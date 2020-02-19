@@ -27,6 +27,8 @@ public class FotTest2 {
 			}
 			//if(check==1){
 			//break;}
+			
+			
 		}
 	}
 }
