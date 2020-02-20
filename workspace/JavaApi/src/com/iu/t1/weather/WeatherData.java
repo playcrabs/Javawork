@@ -1,18 +1,29 @@
 package com.iu.t1.weather;
 
 public class WeatherData {
+	
 	private String data;
+	private StringBuffer sb;
+	
 	public WeatherData() {
+		sb = new StringBuffer();
+		sb.append("seoul,28,눈,60");
+		sb.append("jeju,35,비,90");
+		sb.append("busan,-52,흐림,10");
+		sb.append("incheon,95,맑음,5");
 		//생성자, WeatherData객체 생성시 호출
 		//지역명,온도,날씨,습도
 		data = "seoul,28,눈,60,jeju,35,비,90";
 		data = data + ",busan,-52,흐림,10,incheon,95,맑음,5" ;	
-	}
+		
+	}	
 
 	//메서드 공식 - 접근제어자 리턴타입 메소드이름([매개변수선언]){}
 	//makeInfo()메소드 - data파싱, weatherVO[] 리턴
 	public WeatherVO[] makeInfo(){
-		String [] ar = data.split(",");
+		String str = sb.toString(); //문자열로 바꿔줌
+		//String [] ar = data.split(",");
+		String [] ar = str.split(",");
 		WeatherVO wVO = null ;
 		//WeatherVO wVO = new WeatherVO(); >>4바이트 할당
 		WeatherVO[] weathers = new WeatherVO[4];
