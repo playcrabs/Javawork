@@ -19,8 +19,9 @@ public class RandomTest {
 			}
 		}
 		
+		//for(int n : num){
 		for (int i = 0; i < num.length; i++) {
-			System.out.println(i+"번째 값:"+num[i]);
+			System.out.println(i+1+"번째 값:"+num[i]);
 		}
 		
 	}
