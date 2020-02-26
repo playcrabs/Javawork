@@ -16,7 +16,7 @@ public class StudentController {
 		StudentRemove sr = new StudentRemove();
 		StudentSearch ss = new StudentSearch();
 		ArrayList<StudentVO> sVOs = new ArrayList<StudentVO>();
-		
+
 		Scanner scan = new Scanner(System.in);
 		System.out.println("-------메뉴-------");
 		System.out.println("1.전체 학생 출력");
@@ -31,18 +31,22 @@ public class StudentController {
 		System.out.println("-----------------");
 		if (i == 1) {
 			System.out.println("전체 학생을 출력합니다.");
+			sVOs = sDAO.init();
 			sv.view(sVOs);
-			//sVOs = sDAO.init();
-		}if (i == 2) {
+		}
+		if (i == 2) {
 			System.out.println("새로운 학생의 정보를 입력하십시오");
 			sDAO.addStudent();
-		}if (i == 3) {
+
+		}
+		if (i == 3) {
 			System.out.println("검색할 학생의 이름을 입력하십시오.");
-			ss.search(sVOs);
-		}if (i == 4) {
+		}
+		if (i == 4) {
 			System.out.println("삭제할 학생의 번호를 입력하십시오");
-			sr.remove(sVOs);
-		}if (i == 5) {
+			sDAO.StudentDel(sVOs);
+		}
+		if (i == 5) {
 			System.out.println("종료합니다.");
 			System.exit(0);
 		}
