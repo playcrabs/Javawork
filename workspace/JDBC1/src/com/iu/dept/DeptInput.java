@@ -32,4 +32,13 @@ public class DeptInput {
 		
 		return deptDTO;
 	}
+	
+	public DeptDTO selectOne() {
+		DeptDTO deptDTO = new DeptDTO();
+		
+		System.out.print("열람할 부서번호를 입력하세요:");
+		deptDTO.setDeptno(scan.nextInt());
+		
+		return deptDTO;
+	}
 }
