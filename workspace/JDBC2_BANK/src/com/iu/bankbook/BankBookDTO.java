@@ -6,41 +6,40 @@ public class BankBookDTO {
 	//getter|setter
 	//생성자는 기본생성자 필요
 	
-	private String BOOK_NUMBER;
-	private String BOOK_NAME;
-	private String BOOK_CONTENTS;
-	private Double BOOK_RATE;
-	private int BOOK_SALE;
-	
-	public String getBOOK_NUMBER() {
-		return BOOK_NUMBER;
+	private String BookNumber;
+	private String BookName;
+	private String BookContents;
+	private Double BookRate;
+	private int BookSale;
+	public String getBookNumber() {
+		return BookNumber;
 	}
-	public void setBOOK_NUMBER(String bOOK_NUMBER) {
-		BOOK_NUMBER = bOOK_NUMBER;
+	public void setBookNumber(String bookNumber) {
+		BookNumber = bookNumber;
 	}
-	public String getBOOK_NAME() {
-		return BOOK_NAME;
+	public String getBookName() {
+		return BookName;
 	}
-	public void setBOOK_NAME(String bOOK_NAME) {
-		BOOK_NAME = bOOK_NAME;
+	public void setBookName(String bookName) {
+		BookName = bookName;
 	}
-	public String getBOOK_CONTENTS() {
-		return BOOK_CONTENTS;
+	public String getBookContents() {
+		return BookContents;
 	}
-	public void setBOOK_CONTENTS(String bOOK_CONTENTS) {
-		BOOK_CONTENTS = bOOK_CONTENTS;
+	public void setBookContents(String bookContents) {
+		BookContents = bookContents;
 	}
-	public Double getBOOK_RATE() {
-		return BOOK_RATE;
+	public Double getBookRate() {
+		return BookRate;
 	}
-	public void setBOOK_RATE(Double bOOK_RATE) {
-		BOOK_RATE = bOOK_RATE;
+	public void setBookRate(Double bookRate) {
+		BookRate = bookRate;
 	}
-	public int getBOOK_SALE() {
-		return BOOK_SALE;
+	public int getBookSale() {
+		return BookSale;
 	}
-	public void setBOOK_SALE(int bOOK_SALE) {
-		BOOK_SALE = bOOK_SALE;
+	public void setBookSale(int bookSale) {
+		BookSale = bookSale;
 	}
 	
 	
