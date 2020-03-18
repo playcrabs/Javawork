@@ -78,7 +78,7 @@ public class AccountDAO {
 		return result;
 	}
 	
-	public ArrayList<AccountDTO> selectList()throws Exception{
+	public ArrayList<AccountDTO> selectList(String memberID)throws Exception{
 		Connection con = null;
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -86,9 +86,10 @@ public class AccountDAO {
 		
 		con = DBConnect.getConnection();
 		
-		String sql="select * from account";
+		String sql="select * from account where memberid = ? ";
 		
 		st = con.prepareStatement(sql);
+		st.setString(1, memberID);
 		
 		rs = st.executeQuery();
 		

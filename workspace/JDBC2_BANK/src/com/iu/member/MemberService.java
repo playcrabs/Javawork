@@ -8,6 +8,7 @@ public class MemberService {
 		memberDAO = new MemberDAO();
 	}
 	
+	
 	public MemberDTO login(MemberDTO memberDTO) {
 		try {
 			memberDTO = memberDAO.login(memberDTO);
