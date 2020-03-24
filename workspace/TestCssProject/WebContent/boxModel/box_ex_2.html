@@ -11,20 +11,19 @@
 
 /* 	<!------------ header ------------> */
 header {
-	background-color: black;
+	background-image: url("/TestCssProject/images/header_bg.png");
+	background-repeat: repeat-x;
 	width: 100%;
 	height: 67px;
 }
 
 .header_nav {
-	background-color: yellow;
 	width: 920px;
 	height: 68px;
 	margin: 0 auto;
 }
 
 .logo {
-	background-color: yellow;
 	float: left;
 	height: 41px;
 	width: 142px;
@@ -33,22 +32,24 @@ header {
 }
 
 .nav_main {
-	background-color: fuchsia;
 	height: 100%;
-	width: 50%;
+	width: 60%;
 	display: inline-block;
 }
 
 .nav_sub {
-	background-color: yellow;
 	float: right;
 	height: 100%;
 	width: 20%;
+	margin-left: 0px;
+	margin-top: 3px;
+	font-weight: lighter;
+	font-size: xx-small;
+	font-weight: lighter;
 }
 
 ul {
-	background-color :maroon;
-	width: 400px;
+	width: 500px;
 	height: 34px;
 	margin-top: 18px;
 	margin-left: 30px;
@@ -57,10 +58,11 @@ ul {
 li {
 	display: inline-block;
 	list-style: none;
-	border: 1px solid black;
 	margin-top: 6px;
 	margin-right: 13px;
 	margin-left: 31px;
+	color: white;
+	font-weight: normal;
 }
 
 /* 	<!------------ contents ------------> */
@@ -68,36 +70,51 @@ li {
 	width: 920px;
 	height: 80%;
 	margin: 10px auto;
-	background-color: black;
 }
 
 .notice1 {
+	margin-top: 50px;
 	width: 920px;
 	height: 518px;
-	background-color: gray;
+	width: 920px;
 }
 
 .notice2 {
 	margin-top: 16px;
 	width: 920px;
 	height: 400px;
-	background-color: navy;
 }
 
 .notice2-1 {
 	width: 28%;
 	height: 306px;
 	margin-left: 4%;
-	background-color: yellow;
+	border: 1px solid silver;
 	display: inline-block;
 }
 
 /* 	<!------------ footer ------------> */
 footer {
-	background-color: black;
+	background-image: url("/TestCssProject/images/header_bg.gif");
+	background-repeat: repeat;
 	width: 100%;
-	height: 132px;
+	height: 67px;
+	width: 100%;
+	padding-top: 26px;
+	padding-bottom: 44px;
+	margin: 0px auto;
 }
+
+.privacy {
+	font-size: xx-small;
+	color: white;
+}
+
+.ft_logo {
+	float: left;
+	height: 41px;
+	width: 43px;
+	margin: 0px 20px;
 }
 </style>
 </head>
@@ -105,21 +122,29 @@ footer {
 	<!------------ header ------------>
 	<header>
 		<div class="header_nav">
-			<div class="logo"></div>
+			<div class="logo">
+				<img alt="" src="/TestCssProject/images/logo.png">
+			</div>
 			<div class="nav_main">
 				<ul>
-					<li>company</li>
-					<li>artist</li>
-					<li>pr</li>
-					<li>audition</li>
+					<li>Company</li>
+					<li>Artist</li>
+					<li><a href="./meberlogin.html">Login</a></li>
+					<li>Audition</li>
 				</ul>
 			</div>
-			<div class="nav_sub"></div>
+			<div class="nav_sub">
+				<ul>
+					<li>LOGIN JOIN |    KO EN JP CN</li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<!------------ contents ------------>
 	<div class="contents">
-		<div class="notice1"></div>
+		<div class="notice1">
+			<img alt="" src="/TestCssProject/images/cherry.jpg">
+		</div>
 		<div class="notice2">
 			<div class="notice2-1"></div>
 			<div class="notice2-1"></div>
@@ -127,6 +152,16 @@ footer {
 		</div>
 	</div>
 	<!------------ footer ------------>
-	<footer></footer>
+	<footer>
+		<div class="ft_logo">
+			<img alt="" src="/TestCssProject/images/ft_logo.png">
+		</div>
+		<div class="privacy">
+			<p>개인정보취급방침| 이용약관| 고객센터/문의하기 (Customer Service)</p>
+			<p>서울시 강남구 청담동 111 (주) FNC ENTERTAINMENT | TEL. 02) 517-5426 |
+				FAX. 02) 518-5428</p>
+			<p>COPYRIGHT © 2014 FNCENT.COM ALL RIGHT RESERVED</p>
+		</div>
+	</footer>
 </body>
 </html>

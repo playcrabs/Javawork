@@ -2,195 +2,232 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Toolroom Records</title>
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-@font-face {
-	font-family: 'BebasNenu Bold';
-	src: url('/WebContent/BebasNenu Bold.ttf');
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-	font-family: koverwatch;
-}
-
-.top {
-	width: 100%;
-	background-color: #191919;
-}
-
-/* <!------------ header ------------> */
-.announcement {
-	padding: 10px 0px;
-	height: 17px;
-	text-align: center;
-	color: white;
-}
-
-.logo {
-	
-}
 /* <!------------ contents ------------> */
-
-/* <!------------ footer ------------> */
-footer {
-	width: 100%;
+article {
+	min-width: 1300px;
 }
 
-.about {
+.card {
+	width: 768px;
+	height: 595px;
+	margin: 0px 100px;
+	padding: 80px;
+}
+
+.join {
+	width: 80%;
+	margin: 0px auto;
+	color: silver;
+}
+
+.news {
+	padding-top: 40px;
+	padding-bottom: 80px;
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.newspic>img {
+	padding: 1%;
+	margin: 10px;
+	width: 400px;
+	height: 400px;
+}
+
+.music {
+	padding-top: 40px;
+	padding-bottom: 80px;
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.musicpic>img {
+	padding: 1%;
+	padding-bottom: 50px;
+	margin: 10px;
+	width: 400px;
+	height: 400px;
+	margin: 10px;
+}
+
+.events {
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 900px;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	background-image: url("/Toolroom/img/eventsback.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: xx-large;
+}
+
+.eventul {
+	padding: 3% 0;
+}
+
+.eventpic {
+	margin: 10px;
+}
+
+.button {
+	width: auto;
+	text-align: center;
+	font-size: large;
+	padding: 30px;
 	color: white;
 	background-color: #191919;
-	padding: 100px;
-	height: 154px;
+	margin: 0px auto;
+	width: 80px;
 }
 
-li {
-	list-style: none;
-	display: inline-block;
+.join2 {
+	margin-left: 35px;
 }
 
-.create {
-	color: #939393;
-	background-color: #262626;
-	height: 17px;
-	width: 100%;
-	padding: 20px;
+.join3:hover {
+	color: black;
 }
 
-.copyright {
-	float: left;
+.join3 {
+	margin: 0;
+	padding: 50px 0px;
+	font-size: 40px;
 }
 
-.credits {
-	float: right;
+.join3-1 {
+	color: black;
+	width: 18%
+}
+
+.join3-2 {
+	width: 54%;
+	text-align: left;
+}
+
+.join3-2>input {
+	color: gray;
+}
+
+.join3-3 {
+	width: 12%
+}
+
+.join3-3>input {
+	color: silver;
+	background-color: white;
+}
+
+.join3-3>input:hover {
+	color: black;
+}
+
+.join3-4 {
+	width: 12%
 }
 </style>
 </head>
+
 <body>
 	<div class="top">
-		<div class="announcement">❗️PLEASE EXPECT A SERIOUS DELAY ON
-			ORDERS FROM THE SHOP ❗️</div>
+		<div class="announcement">
+			<a href="https://toolroomrecords.com/shop/">❗️PLEASE EXPECT A
+				SERIOUS DELAY ON ORDERS FROM THE SHOP ❗️</a>
+		</div>
 	</div>
 	<!------------ header ------------>
 	<header>
 		<div class="logo">
-			<img alt="logo" src="/WebContent/img/mainlogo.png">
+			<a href="#"> <img alt="logo" src="/Toolroom/img/logo.svg"></a>
 		</div>
 		<div class="menu">
-			<img alt="" src="">
+			<ul>
+				<li class="menu3"><a href="#">BOARD</a></li>
+				<li class="menu3"><a href="#">LOGIN</a></li>
+				<li class="menu3"><a href="#">JOIN</a></li>
+			</ul>
 		</div>
 	</header>
+	<div class="box"></div>
 	<!------------ contents ------------>
 	<article>
 		<section class="card">
-			<img alt="" src="">
+			<img alt="" src="/Toolroom/img/radio.jpg">
 		</section>
 		<section class="join">
-			JOIN THE FAMILY
-			<div>EMAIL ADDRESS</div>
-			<div>I AGREE</div>
-			<div>MORE INFO</div>
+			<ul class="join2">
+				<li class="join3 join3-1">JOIN THE FAMILY</li>
+				<li class="join3 join3-2"><input type="email"
+					placeholder="EMAIL ADDRESS"></li>
+				<li class="join3 join3-3"><input type="submit" value="I AGREE"></li>
+				<li class="join3 join3-4">MORE INFO</li>
+			</ul>
 		</section>
 		<section class="news">
+			NEWS
 			<ul>
-				<li><img alt="" src="">MAXINNE & MIZBEE</li>
-				<li><img alt="" src="">THE SPIRIT OF HOUSE</li>
-				<li><img alt="" src="">MEET MARTIN IKIN</li>
+				<li class="newspic"><img alt="" src="/Toolroom/img/news1.jpg"></li>
+				<li class="newspic"><img alt="" src="/Toolroom/img/news2.jpg"></li>
+				<li class="newspic"><img alt="" src="/Toolroom/img/news3.jpg"></li>
 			</ul>
 			<ul>
-				<li><img alt="" src="">#WEARELISTNING</li>
-				<li><img alt="" src="">THE UK TOUR</li>
-				<li><img alt="" src="">TOOLROOM IN STEREO: MIAMI & LONDON</li>
-			</ul>
-			<div class="button">
-				<a href="">VIEW ALL</a>
-			</div>
-		</section>
-		<section class="shop">
-			<ul>
-				<li><img alt="" src=""><li></li></li>
-
-
-
-
-
-
-
-
-
-
-				<li><img alt="" src=""><li></li></li>
-
-
-
-
-
-
-
-
-
-
-				<li><img alt="" src=""><li></li></li>
-
-
-
-
-
-
-
-
-
-
+				<li class="newspic"><img alt="" src="/Toolroom/img/news4.jpg"></li>
+				<li class="newspic"><img alt="" src="/Toolroom/img/news5.jpg"></li>
+				<li class="newspic"><img alt="" src="/Toolroom/img/news6.jpg"></li>
 			</ul>
 			<div class="button">
-				<a href="">VIEW ALL</a>
-			</div>
-		</section>
-		<section class="music">
-			<ul>
-				<li><img alt="" src=""></li>
-				<li><img alt="" src=""></li>
-				<li><img alt="" src=""></li>
-			</ul>
-			<div class="button">
-				<a href="">VIEW ALL</a>
+				<a href="#">VIEW ALL</a>
 			</div>
 		</section>
 		<section class="events">
-			<div>
-				<img alt="" src="">
-			</div>
-			<div>
-				<img alt="" src="">
-			</div>
+			EVENTS
+			<ul class="eventul">
+				<li class="eventpic"><img alt=""
+					src="/Toolroom/img/events1.jpg"></li>
+				<li class="eventpic"><img alt=""
+					src="/Toolroom/img/events2.jpg"></li>
+			</ul>
 			<div class="button">
-				<a href="">VIEW ALL</a>
+				<a href="#">VIEW ALL</a>
 			</div>
 		</section>
-		<section class="academy">
-			<div>
-				<img alt="" src="">
+		<section class="music">
+			MUSIC
+			<ul>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music1.jpg"></li>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music2.jpg"></li>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music3.jpg"></li>
+			</ul>
+			<ul>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music4.jpg"></li>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music5.jpg"></li>
+				<li class="musicpic"><img alt="" src="/Toolroom/img/music6.jpg"></li>
+			</ul>
+			<div class="button">
+				<a href="#">VIEW ALL</a>
 			</div>
-			<div>
-				<img alt="" src="">
-			</div>
-			<div>
-				<img alt="" src="">
-			</div>
-
 		</section>
 	</article>
 	<!------------ footer ------------>
 	<footer>
 		<div class="about">
-			<div class="logo2"></div>
-			<ul class="policy">
-				<li>About |</li>
-				<li>Contact Us |</li>
-				<li>Sign Up |</li>
-				<li>Demos |</li>
-				<li>Privacy Policy</li>
+			<div class="logo2">
+				<img alt="" src="/Toolroom/img/logomark.svg">
+			</div>
+			<ul>
+				<li class="policy"><a href="#"> About </a>|</li>
+				<li class="policy"><a href="#"> Contact Us </a>|</li>
+				<li class="policy"><a href="#"> Sign Up </a>|</li>
+				<li class="policy"><a href="#"> Demos </a>|</li>
+				<li class="policy"><a href="#"> Privacy Policy</a></li>
 			</ul>
 		</div>
 		<div class="create">
