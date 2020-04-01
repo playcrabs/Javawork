@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.c2 {
+	border: 1px solid red;
+	display: block;
+	margin: 0px auto;
+}
+</style>
+</head>
+<body>
+	<div>
+		<h1>your image</h1>
+		<img id="id" alt="" src="../img/1.jpeg">
+	</div>
+
+	<script type="text/javascript">
+		var check = window.confirm("이미지 변경?");
+		alert(check);
+		if (check) {
+			var id = window.document.getElementById("id");
+			id.src = "../img/2.jpeg";
+
+			id.setAttribute("class","c2");
+			id.setAttribute("class","c1");
+		}
+	</script>
+</body>
+</html>

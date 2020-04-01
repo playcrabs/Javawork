@@ -3,12 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <title>Post | Toolroom records</title>
-<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<link href="./css/new_layout.css" rel="stylesheet" type="text/css">
 <style type="text/css">
+form {
+	padding: 50px 300px;
+}
 
+table {
+	width: 100%;
+	margin: 0px auto;
+}
+
+.input {
+	height: 30px;
+	width: 1000px;
+	font-size: 25px;
+	padding-left: 5px;
+}
+
+textarea {
+	width: 1000px;
+	height: 300px;
+	padding-left: 5px;
+	padding-right: 2px;
+	padding-top: 3px;
+	font-size: 25px;
+	padding-top: 3px;
+}
+
+th {
+	text-align: right;
+	padding-right: 10px;
+	font-size: 30px;
+}
+
+.submit {
+	padding: 5px 15px;
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
+	background-color: black;
+	border: none;
+	margin: 1% 10%;
+	margin-left: 40%;
+}
 </style>
 </head>
 <body>
+	<!------------ header ------------>
+	<header>
+		<a href="#"><span class="announcement">❗️PLEASE EXPECT A
+				SERIOUS DELAY ON ORDERS FROM THE SHOP❗️</span></a>
+		<div class="top_bar">
+			<a href="/Toolroom/Toolroom.html" class="mainlogo"> <img
+				alt="Toolroom" src="/Toolroom/img/logo.svg"></a>
+			<ul class="header_nav">
+				<li class="header_nav"><a href="/Toolroom/board.html">BOARD</a></li>
+				<li class="header_nav"><a href="/Toolroom/terms.html">JOIN</a></li>
+				<li class="header_nav"><a href="/Toolroom/login.html">LOGIN</a></li>
+			</ul>
+		</div>
+		<div class="box"></div>
+	</header>
+	<!------------ contents ------------>
+	<h1></h1>
+	<form>
+		<table>
+			<tr>
+				<th>title</th>
+				<td><input type="text" class="input"></td>
+			</tr>
+			<tr>
+				<th>post</th>
+				<td><textarea cols="10"></textarea></td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td><input type="password" class="input"></td>
+			</tr>
+		</table>
+		<input type="button" value="submit" class="submit">
+	</form>
+	<!------------ footer ------------>
+	<footer>
+		<div class="about">
+			<div class="logo">
+				<a href="/Toolroom/Toolroom.html"> <img alt="T" src="/Toolroom/img/logomark.svg"></a>
+			</div>
+			<ul class="footer_nav">
+				<li class="footer_nav"><a href="#">Privacy Policy</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Demos</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Sign up</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Contact Us</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">About</a></li>
+			</ul>
+		</div>
+		<div class="sub">
+			<p>© 2020 Toolroom Records.</p>
+			<div>Designed by Jordan | Built by Mike</div>
+		</div>
+	</footer>
 
 </body>
 </html>

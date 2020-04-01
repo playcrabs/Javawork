@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#d1 {
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+}
+
+img {
+	width: 300px;
+	height: 300px;
+}
+
+#d3 {
+	background-color: lime;
+	width: 302px;
+	height: 302px;
+}
+</style>
+</head>
+<body>
+	<!-- 마우스가 올라가면 랜덤한 이미지로 바뀌고, 빠져나가면 원래대로 -->
+	<div id="d1">
+		<img id="d2" alt="" src="../img/music1.jpg">
+	</div>
+
+	<div id="d3"></div>
+	<script type="text/javascript">
+		var d1 = document.getElementById("d1");
+		var d2 = document.getElementById("d2");
+		var d3 = document.getElementById("d3");
+		/* 	파일명이 똑같지 않을때는, 배열에 넣기
+			var files = ["파일명1","파일명2", ... ]; */
+
+		d1.addEventListener("mouseover", function() {
+			var random = Math.floor(Math.random() * 3) + 2;
+			console.log("music" + random + ".jpg");
+			d2.src = "../img/music"+random+".jpg";
+			d3.style.display="none";
+			/* d2.src="../img/"+files[random] */
+		})
+		
+		d1.addEventListener("mouseout", function() {
+			console.log("out");
+			d2.src = "../img/music1.jpg";
+			d3.style.display="block";
+			/* d2.src="../img/"+files[0] */
+		})
+	</script>
+</body>
+</html>

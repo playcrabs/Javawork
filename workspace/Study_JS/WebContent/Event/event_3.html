@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#d1 {
+	background-color: red;
+	width: 300px;
+	height: 300px;
+	margin: 0px auto;
+}
+</style>
+</head>
+<body>
+	<div id="d1"></div>
+	
+	<script type="text/javascript">
+	/*	  */
+		var d1 = document.getElementById("d1");
+		
+		d1.addEventListener("mouseover", function() {
+			var random = Math.floor(Math.random()*10)+1;
+			console.log(random);
+			d1.style.backgroundColor="blue";
+		});
+		d1.addEventListener("mouseout", function() {
+			console.log("mouse out");
+			d1.style.backgroundColor="red";
+		});
+	</script>
+</body>
+</html>

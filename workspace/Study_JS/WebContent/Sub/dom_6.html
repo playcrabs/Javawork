@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table {
+	width: 60%;
+	margin: 0 auto;
+}
+
+table, td {
+	border: 1px solid red;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+td{
+	height: 30px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<table id="t1">
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		var r = prompt("row의 갯수"); //tr
+		var c = prompt("col의 갯수"); //td
+
+		var result = "";
+		var result2 = "";
+		console.log(r);
+		console.log(c);
+		for (i = 0; i < r; i++) {
+			result += "<tr>";
+			for (j = 0; j < c; j++) {
+				result += "<td></td>";
+				console.log(i, j);
+			}
+			result += "</tr>";
+		}
+		document.getElementById("t1").innerHTML = result;
+	</script>
+</body>
+</html>

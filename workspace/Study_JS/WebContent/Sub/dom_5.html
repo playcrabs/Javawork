@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		출생년도:<select id="s1"></select>
+		<!-- 1900~2020 -->
+	</div>
+	<div>
+		월:<select id="s2"></select>
+		<!-- 1~12 -->
+	</div>
+
+	<script type="text/javascript">
+		var result = "";
+		for (var i = 1900; i < 2020; i++) {
+			result += "<option>" + i + "</option>";
+		}
+
+		document.getElementById("s1").innerHTML = result;
+		
+
+		var result1 = "";
+		for (var j = 1; j < 12; j++) {
+			result1 += "<option>" + j + "</option>";
+		}
+
+		document.getElementById("s2").innerHTML = result1;
+	</script>
+</body>
+</html>

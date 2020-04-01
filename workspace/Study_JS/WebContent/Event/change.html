@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.success {
+		color: blue;
+	}
+	.fail {
+		color:red;
+	}
+</style>
+</head>
+<body>
+
+	<form action="./key_2_join.html" id="frm">
+		<p>
+			<!-- 최소 6자 이상 -->
+			ID <input type="text" id="yId">
+			<p id="idCheck"></p>
+		</p>
+		
+		<p>
+			<!-- 최소 6자 이상 -->
+			<!-- blur -->
+			PW <input type="password" id="yPw">
+			<p id="pwCheck"></p>
+		</p>
+		
+		<p>
+			<!-- blur -->
+			PW <input type="password" id="yPw2">
+			<p id="pwCheck2"></p>
+		</p>
+		
+		<p>
+			Name <input type="text" class="ch">
+		</p>
+		
+		<p>
+			Phone <input type="text" class="ch">
+		</p>
+		
+		<p>
+			Email <input type="text" class="ch">
+		</p>
+	
+		<input type="button" value="Join" id="join">
+	</form>
+<script type="text/javascript">
+	var yId = document.getElementById("yId");
+	var idCheck = document.getElementById("idCheck");
+	
+	var yPw = document.getElementById("yPw");
+	var pwCheck = document.getElementById("pwCheck");
+
+	var yPw2 = document.getElementById("yPw2");
+	var pwCheck2 = document.getElementById("pwCheck2");
+	
+	var ch = document.getElementsByClassName("ch");
+	
+	var frm = document.getElementById("frm");
+
+	//*************** ID Check *******************
+	var idResult=false;
+	yId.addEventListener("keyup", function() {
+		var size = yId.value.length;
+		if(size>5){
+			idCheck.innerHTML="사용가능한 ID";
+			idCheck.style.color="blue";
+			idResult=true;
+		}else {
+			idCheck.innerHTML="ID는 6자 이상";
+			idCheck.style.color="red";
+			idResult=false;
+		}
+	});
+	
+	//*************** PW Check *******************
+	var pwResult=false;
+	
+	yPw.addEventListener("change", function() {
+		yPw2.value="";
+		ypwResult2=false;
+		pwCheck2.innerHTML="PW가 일치하지 않음";
+		pwCheck2.setAttribute("class", "fail");
+	});
+	
+	yPw.addEventListener("blur", function() {
+		var size = yPw.value.length;
+		if(size>5){
+			pwCheck.innerHTML="사용가능한 PW";
+			pwCheck.style.color="blue";
+			pwResult=true;
+		}else {
+			pwCheck.innerHTML="PW는 6자 이상";
+			pwCheck.style.color="red";
+			pwResult=false;
+		}
+	});
+	
+	//*************** PW2 Check *******************
+	var pwResult2=false;
+	yPw2.addEventListener("blur", function() {
+		if(yPw2.value==yPw.value){
+			pwCheck2.innerHTML="PW가 일치";
+			pwCheck2.setAttribute("class", "success");
+			pwResult2=true;
+		}else {
+			pwCheck2.innerHTML="PW가 일치하지 않음";
+			pwCheck2.setAttribute("class", "fail");
+			yPw2.value="";
+			pwResult2=false;
+		}
+		
+	});
+	
+	
+	var join = document.getElementById("join");
+	
+	join.addEventListener("click", function(e){
+		var check=true;
+		for(i=0;i<ch.length;i++){
+			if(ch[i].value.length==0){
+				check=false;
+				break;
+			}
+		}
+		
+		
+		if(!(idResult && pwResult && pwResult2 && check)){
+			alert("필수 요소 입력");
+			yId.focus();
+			e.preventDefault();
+		}else {
+			frm.submit();
+		}
+		
+		
+		
+	});
+</script>	
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#d1 {
+	width: 200px;
+	height: 200px;
+	background-color: yellow
+}
+</style>
+</head>
+<body>
+	<div id="d1"></div>
+	<button id="d2">click</button>
+
+	<script type="text/javascript">
+		/*	  */
+		var d1 = document.getElementById("d1");
+		var d2 = document.getElementById("d2");
+		var d3 = document.getElementById("d3");
+
+		d1.addEventListener("click", function() {
+			alert('d3');
+		})
+		d2.addEventListener("click", function() {
+			d1.innerHTML = '<button id="d3">d1</button>';
+		})
+		d3.addEventListener("click", function() {
+			alert('d3');
+		})
+	</script>
+</body>
+</html>

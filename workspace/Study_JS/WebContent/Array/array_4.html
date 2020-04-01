@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>성적 입력</h1>
+	<p>
+		국어:<input type="text" class="point">
+	</p>
+	<p>
+		영어:<input type="text" class="point">
+	</p>
+	<p>
+		수학:<input type="text" class="point">
+	</p>
+
+	<script type="text/javascript">
+		//prompt
+		//국어 영어 수학 점수를 입력받고, 점수들을 p태그에 입력
+		var sub = ['국어', '영어', '수학'];
+		var point = [];
+		
+		for (var i = 0; i < sub.length; i++) {
+			point.push(prompt(sub[i]+'점수 입력'));
+		}
+		
+		var p = window.document.getElementsByClassName("point");
+		
+		for (var i = 0; i < p.length; i++) {
+			p[i].setAttribute("value",point[i]);
+		}
+	</script>
+</body>
+</html>

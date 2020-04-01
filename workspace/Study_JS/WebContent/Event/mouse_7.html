@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>ALL</h3>
+	<input type="checkbox" id="i1">
+
+	<h3>first</h3>
+	<input type="checkbox" class="c1">
+	<h3>second</h3>
+	<input type="checkbox" class="c1">
+	<h3>third</h3>
+	<input type="checkbox" class="c1">
+	<p></p>
+	<button id="btn">go</button>
+	<!-- 
+	1. 첫번째 버튼으로 모두 체크/체크 해제
+	2. 단 하나라도 버튼이 눌려져있지않으면 첫번째 버튼 체크해제
+	3. 버튼 누르면 모두 체크되어있는지 확인하고 alert
+	4. 전부 클릭이벤트가 들어가있음
+	 -->
+	<script type="text/javascript">
+		var i1 = document.getElementById("i1");
+		var c1 = document.getElementsByClassName("c1");
+		var btn = document.getElementById("btn");
+
+		i1.addEventListener("click", function() {
+			for (var i = 0; i < c1.length; i++) {
+					c1[i].checked=i1.checked;
+			}
+		})
+
+		for (var i = 0; i < c1.length; i++) {
+			c1[i].addEventListener("click", function() {
+				var result = true;
+				
+				for (var j = 0; j < c1.length; j++) {
+					if (!c1[j].checked) {
+						result = false;
+						break;
+					}
+				}
+				i1.checked = result;
+			})
+		}
+
+		btn.addEventListener("click", function() {
+			if (i1.checked) {
+				alert('!!!!');
+				location.href="";
+			}
+		});
+	</script>
+</body>
+</html>

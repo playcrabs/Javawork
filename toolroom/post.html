@@ -2,60 +2,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login | Toolroom records</title>
+<title>Post | Toolroom records</title>
 <link href="./css/new_layout.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-.section {
-	width: 100%;
-	padding: 50px 0 100px 0px;
-	margin-bottom: 50px;
-	text-align: center;
+form {
+	padding: 50px 300px;
 }
 
 table {
+	width: 100%;
 	margin: 0px auto;
 }
 
-tr td {
-	padding: 18px;
+.input {
+	height: 30px;
+	width: 1000px;
+	font-size: 25px;
+	padding-left: 5px;
 }
 
-h1 {
-	text-align: center;
-	font-size: 80px;
+textarea {
+	width: 1000px;
+	height: 300px;
+	padding-left: 5px;
+	padding-right: 2px;
+	padding-top: 3px;
+	font-size: 25px;
+	padding-top: 3px;
 }
 
-.name {
-	font-size: 60px;
-}
-
-.in {
-	height: 60px;
-	width: 350px;
-	border: 1px silver solid;
-	font-size: 50px;
-	padding: 10px;
-	font-weight: lighter;
-}
-
-placeholder {
-	color: silver;
+th {
+	text-align: right;
+	padding-right: 10px;
+	font-size: 30px;
 }
 
 .submit {
+	padding: 5px 15px;
 	color: white;
 	font-size: 30px;
 	text-decoration: none;
 	background-color: black;
 	border: none;
-	padding: 20px 30px;
+	margin: 1% 10%;
+	margin-left: 40%;
 }
-
-.submit : hover {
-	color: black;
-	background-color: white;
-}
-
 </style>
 </head>
 <body>
@@ -64,38 +55,35 @@ placeholder {
 		<a href="#"><span class="announcement">❗️PLEASE EXPECT A
 				SERIOUS DELAY ON ORDERS FROM THE SHOP❗️</span></a>
 		<div class="top_bar">
-			<a href="/Toolroom/Toolroom.html" class="mainlogo"> <img alt="Toolroom"
-				src="/Toolroom/img/logo.svg"></a>
+			<a href="/Toolroom/Toolroom.html" class="mainlogo"> <img
+				alt="Toolroom" src="/Toolroom/img/logo.svg"></a>
 			<ul class="header_nav">
 				<li class="header_nav"><a href="/Toolroom/board.html">BOARD</a></li>
-				<li class="header_nav"><a href="/Toolroom/terms.html">JOIN</a></li>
+				<li class="header_nav"><a href="/Toolroom/join.html">JOIN</a></li>
 				<li class="header_nav"><a href="/Toolroom/login.html">LOGIN</a></li>
 			</ul>
 		</div>
 		<div class="box"></div>
 	</header>
 	<!------------ contents ------------>
-	<div class="section">
+	<h1></h1>
+	<form>
 		<table>
 			<tr>
-				<th colspan="2">
-					<h1>Login</h1>
-				</th>
+				<th>title</th>
+				<td><input type="text" class="input"></td>
 			</tr>
 			<tr>
-				<td class="name">id</td>
-				<td><input type="email" placeholder="email" class="in"></td>
+				<th>post</th>
+				<td><textarea cols="10"></textarea></td>
 			</tr>
 			<tr>
-				<td class="name">pw</td>
-				<td><input type="password" placeholder="password" class="in"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="submit"
-					class="submit"></td>
+				<th>password</th>
+				<td><input type="password" class="input"></td>
 			</tr>
 		</table>
-	</div>
+		<input type="button" value="submit" class="submit">
+	</form>
 	<!------------ footer ------------>
 	<footer>
 		<div class="about">
@@ -119,5 +107,6 @@ placeholder {
 			<div>Designed by Jordan | Built by Mike</div>
 		</div>
 	</footer>
+
 </body>
 </html>

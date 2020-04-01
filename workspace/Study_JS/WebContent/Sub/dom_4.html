@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Test</h1>
+	<ul id="r1">
+	</ul>
+	<script type="text/javascript">
+		var count = prompt("1~10사이의 숫자를 입력하세요");
+		var result="";
+		for (i = 0; i < count; i++) {
+			console.log(i);
+
+			//result = result + "<li>"+i+"</li>";
+
+			result += "<li>"+i+"</li>";
+		}
+		document.getElementById("r1").innerHTML = result;
+	</script>
+</body>
+</html>

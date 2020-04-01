@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'BebasNeue Bold';
+	src: url('/Toolroom/BebasNeue Bold.ttf');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: BebasNeue Bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+/* <!------------ header ------------> */
+header {
+	z-index: 100;
+}
+
+.announcement {
+	padding: 10px 0px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+	background-color: #191919;
+}
+
+.top_bar {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	background-color: white;
+	opacity: 0.85;
+}
+
+.header_nav {
+	float: right;
+	font-size: 30px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.header_nav>a {
+	color: black;
+}
+
+.mainlogo>img {
+	height: 35px;
+	width: 143px;
+	float: left;
+	margin-left: 30px;
+}
+
+.box {
+	height: 128px;
+	width: 100%;
+	background-color: white;
+}
+
+/* <!------------ contents ------------> */
+
+/* <!------------ footer ------------> */
+footer {
+	text-align: center;
+	z-index: 100;
+}
+
+.about {
+	color: white;
+	padding: 100px;
+	background-color: #191919;
+}
+
+.about>ul li a {
+	color: white;
+}
+
+.footer_nav {
+	display: inline-block;
+	font-size: 20px;
+	margin: 0 10px;
+}
+
+.logo {
+	margin-bottom: 40px;
+}
+
+.sub {
+	padding: 20px;
+	color: gray;
+	background-color: #262626;
+}
+
+.copyright {
+	float: left;
+}
+
+.credits {
+	float: right;
+}

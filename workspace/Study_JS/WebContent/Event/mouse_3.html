@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<select>
+		<option class="opt">KT</option>
+		<option class="opt">SKT</option>
+		<option class="opt" selected="selected">LG</option>
+	</select>
+	<button id="btn">CLICK</button>
+
+	<!-- 선택한 옵션값이 버튼을 누르면 alert창으로 뜸 -->
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+
+		btn.onclick = function() {
+			var opt = document.getElementsByClassName("opt");
+			for (var i = 0; i < opt.length; i++) {
+				if (opt[i].selected) {
+					alert(opt[i].innerHTML);
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="n1" class="n3"> *
+	<input type="text" id="n2" class="n3">
+	<button onclick="go();">CLICK</button>
+	
+	<!-- 함수 내에서 가지고 와서 클릭 누르면 alert창으로 뜨기 -->
+		
+	<script type="text/javascript">
+
+	function go() {
+		var n1 = document.getElementById("n1").value;
+		var n2 = document.getElementById("n2").value;
+		/* ---- var는 *1을 하면 문자열에서 숫자로 바뀐다 ---- */
+		
+		alert(n1*n2);
+		/* ----getElementsByClassName는 무조건 배열---- */
+		var n3 =document.getElementsByClassName("n3");
+		console.log(n3[0].value * n3[1].value);
+	}
+	</script>
+</body>
+</html>

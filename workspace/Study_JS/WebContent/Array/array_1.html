@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//배열 생성
+		//빈 배열
+		var ar = [];
+		var ar2 = new Array();
+
+		//데이터가 있는 배열
+		var ar3 = [ 1, 2, 3 ];
+		console.log(ar3[0]);
+
+		//ar3에 집어넣기
+		ar3[3] = 4;
+		console.log(ar3[3]);
+
+		ar3[0] = 100;
+		console.log(ar3[0]);
+
+		console.log(ar3);
+		var e = ar3.pop();
+		console.log(e);
+		console.log(ar3);
+
+		e = ar3.push(999);
+		console.log(e);
+		console.log(ar3);
+
+		e = ar3.shift();
+		console.log(e);
+		console.log(ar3);
+
+		e = ar3.unshift(3.14);
+		console.log(e);
+		console.log(ar3);
+	</script>
+</body>
+</html>

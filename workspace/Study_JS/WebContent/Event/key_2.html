@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.in {
+	border: none;
+	color: red;
+	width: 200px;
+}
+</style>
+</head>
+<body>
+	<!--	회원가입	-->
+	<form action="./key_2_join.html">
+		<p>
+			<!--최소 6자 이상
+			한글자 씩 입력하면서
+			6자 이상이 되기전까지 경고메세지
+			6자 이후에는 확인 메세지-->
+			Id <input id="d1" type="text"> <input id="d1m" type="text"
+				value="" class="in">
+		</p>
+		<p>
+			<!--최소 6자 이상
+			입력이 끝난 후에 경고/확인 메세지--->
+			Pw <input id="d2" type="password"> <input id="d2m"
+				type="text" value="" class="in">
+		</p>
+		<p>
+			<!--입력이 끝난 이후에
+			경고/확인 메세지
+			Pw와 값이 같은지 확인
+			같지 않으면 빈칸으로 만들어줌-->
+			Pw Check <input id="d2c" type="password"> <input id="d2cm"
+				type="text" value="" class="in">
+		</p>
+		<p>
+			Name <input id="d3" type="text" id="">
+		</p>
+		<p>
+			Tel <input id="d4" type="text">
+		</p>
+		<p>
+			Email <input id="d5" type="text">
+		</p>
+
+		<!--모든 조건이 충족하고, 들어가 있는지 확인-->
+		<input id="join" type="submit" value="Join">
+	</form>
+
+	<script type="text/javascript">
+		var d1 = document.getElementById("d1");
+		var d1m = document.getElementById("d1m");
+		var d2 = document.getElementById("d2");
+		var d2m = document.getElementById("d2m");
+		var d2c = document.getElementById("d2c");
+		var d3 = document.getElementById("d3");
+		var d4 = document.getElementById("d4");
+		var d5 = document.getElementById("d5");
+		var join = document.getElementById("join");
+		var v1 = false;
+		var v2 = false;
+		var v3 = false;
+
+		d1.addEventListener("keyup", function() {
+			if (d1.value.length < 6) {
+				d1m.value = "아이디는 6자 이상이어야 합니다";
+				v1 = true;
+
+			} else {
+				d1m.value = "아이디 확인";
+				d1m.style.color = "green";
+			}
+		})
+
+		d2.addEventListener("blur", function() {
+			if (d2.value.length < 6) {
+				d2m.value = "비밀번호는 6자 이상이어야 합니다.";
+			} else {
+				d2m.value = "비밀번호 확인";
+				d2m.style.color = "green";
+			}
+		})
+
+		d2.addEventListener("change", function() {
+			d2.value = "";
+			d2c.value = "";
+		})
+
+		d2c.addEventListener("blur", function() {
+			if (d2.value === d2c.value) {
+				d2cm.value = "비밀번호 확인";
+				d2cm.style.color = "green";
+				v2 = true;
+			} else {
+				d2c.value = "";
+				d2cm.value = "비밀번호가 일치하지 않습니다."
+			}
+		})
+
+		join.addEventListener("click", function(e) {
+			/* 아이디 6글자 이상, 비밀번호 6글자이상-일치확인, 나머지 1글자 이상 */
+			if (d3.value.length, d4.value.length, d5.value.length > 0) {
+				v3 = true;
+			}
+			if (v1, v2, v3 === true) {
+				alert('회원가입 성공');
+			} else {
+				/* 조건이 하나라도 틀리면 넘어가면 안됨 */
+				e.preventDefault();
+			}
+		})
+	</script>
+</body>
+</html>

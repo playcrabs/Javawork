@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#d1 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div id="d1" onclick="go()"></div>
+	<input type="button" value="CLICK" onclick="go(); go2();">
+
+	<script type="text/javascript">
+		function go() {
+			alert('click!');
+		}
+		function go2() {
+			alert('click!!');
+		}
+	</script>
+</body>
+</html>

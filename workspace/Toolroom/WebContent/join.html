@@ -3,12 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <title>Join | Toolroom records</title>
-<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<link href="./css/new_layout.css" rel="stylesheet" type="text/css">
 <style type="text/css">
+.section {
+	width: 100%;
+	padding: 50px 0 100px 0px;
+	margin-bottom: 50px;
+	text-align: center;
+}
 
+table {
+	margin: 0px auto;
+}
+
+tr {
+	padding: 18px;
+}
+
+td {
+	padding: 0px 30px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 80px;
+	margin-bottom: 50px;
+}
+
+h3 {
+	text-align: left;
+	font-size: 40px;
+}
+
+.in {
+	height: 40px;
+	width: 350px;
+	border: 1px silver solid;
+	font-size: 30px;
+	padding: 10px;
+	font-weight: lighter;
+	color: #565656;
+}
+
+.radio {
+	height: 30px;
+	width: 30px;
+	padding: 10px;
+}
+
+span {
+	padding: 10px 40px 10px 10px;
+	font-size: 40px;
+}
+
+select {
+	height: 65px;
+	width: 370px;
+	border: 1px silver solid;
+	font-size: 30px;
+	padding-left: 5px;
+	font-weight: lighter;
+	color: #565656;
+}
+
+.gender {
+	float: left;
+	padding: 15px 30px;
+}
+
+.submit {
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
+	background-color: black;
+	border: none;
+	padding: 20px 30px;
+	margin: 50px;
+}
+
+.ppp {
+	text-align: left;
+	color:black;
+}
 </style>
 </head>
 <body>
+	<!------------ header ------------>
+	<header>
+		<a href="#"><span class="announcement">❗️PLEASE EXPECT A
+				SERIOUS DELAY ON ORDERS FROM THE SHOP❗️</span></a>
+		<div class="top_bar">
+			<a href="/Toolroom/Toolroom.html" class="mainlogo"> <img
+				alt="Toolroom" src="/Toolroom/img/logo.svg"></a>
+			<ul class="header_nav">
+				<li class="header_nav"><a href="/Toolroom/board.html">BOARD</a></li>
+				<li class="header_nav"><a href="/Toolroom/terms.html">JOIN</a></li>
+				<li class="header_nav"><a href="/Toolroom/login.html">LOGIN</a></li>
+			</ul>
+		</div>
+		<div class="box"></div>
+	</header>
+	<!------------ contents ------------>
+	<div class="section">
+		<table>
+			<tr>
+				<th colspan="2">
+					<h1>JOIN</h1>
+				</th>
+			<tr>
+				<td class="name"><h3>name</h3></td>
+				<td class="name"><h3>country</h3></td>
+			</tr>
+			<tr>
+				<td><input type="text" class="in"></td>
+				<td><select>
+						<option>UK</option>
+						<option>USA</option>
+						<option>KOREA</option>
+						<option>JAPAN</option>
+						<option>FRANCE</option>
+						<option>SWEDEN</option>
+						<option>BELGIUM</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><span></span></td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td class="name"><h3>email</h3></td>
+				<td class="name"><h3>date of birth</h3></td>
+			</tr>
+			<tr>
+				<td><input type="text" class="in" id="email"></td>
+				<td><input type="date" class="in" value="1997-11-17"></td>
+			</tr>
+			<tr>
+				<td><p class="ppp" id="emailp"></p></td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td class="name"><h3>password</h3></td>
+				<td class="name"><h3>gender</h3></td>
+			</tr>
+			<tr>
+				<td><input type="password" class="in" id="password"></td>
+				<td class="gender"><input type="radio" class="radio" value="m"><span>male</span><input
+					type="radio" class="radio" value="f"><span>female</span></td>
+			</tr>
+			<tr>
+				<td><p class="ppp" id="passwordp"></p></td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="submit"
+					class="submit" id="submit"></td>
+			<tr>
+		</table>
+	</div>
+	<!------------ footer ------------>
+	<footer>
+		<div class="about">
+			<div class="logo">
+				<a href="/Toolroom/Toolroom.html"> <img alt="T"
+					src="/Toolroom/img/logomark.svg"></a>
+			</div>
+			<ul class="footer_nav">
+				<li class="footer_nav"><a href="#">Privacy Policy</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Demos</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Sign up</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">Contact Us</a></li>
+				<li class="footer_nav">|</li>
+				<li class="footer_nav"><a href="#">About</a></li>
+			</ul>
+		</div>
+		<div class="sub">
+			<p>© 2020 Toolroom Records.</p>
+			<div>Designed by Jordan | Built by Mike</div>
+		</div>
+	</footer>
 
+	<script type="text/javascript">
+		var email = document.getElementById("email");
+		var emailp = document.getElementById("emailp");
+		var submit = document.getElementById("submit");
+		var password = document.getElementById("password");
+		
+		password.addEventListener("blur", function() {
+			if (password.value.length < 6) {
+				passwordp.style.color = "red";
+				passwordp.innerText = "The password must be at least 6 characters";
+			} else {
+				passwordp.style.color = "green";
+				passwordp.innerText = "this password is available";
+			}
+		})
+		
+		submit.addEventListener("click", function() {
+			if (email.value.length < 1) {
+				emailp.style.color = "red";
+				emailp.innerText = "This is a required field!";
+			}
+		})
+	</script>
 </body>
 </html>

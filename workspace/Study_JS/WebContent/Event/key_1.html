@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="d1" type="text"> * 100 =
+	<input id="d2" type="text" value="">
+
+	<script type="text/javascript">
+		var d1 = document.getElementById("d1");
+		var d2 = document.getElementById("d2");
+
+		d1.addEventListener("keyup", function() {
+			var v = d1.value;
+			console.log(v);
+			d2.value=v.length*100+"원";
+		})
+		
+		d1.addEventListener("focus", function() {
+			d1.style.backgroundColor = "silver";
+		})
+		
+		d1.addEventListener("blur", function() {
+			d1.style.backgroundColor = "white";
+		})
+	</script>
+</body>
+</html>

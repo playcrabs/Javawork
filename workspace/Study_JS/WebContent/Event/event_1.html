@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#d1 {
+	width: 300px;
+	height: 300px;
+	background-color: red;
+}
+
+#d2 {
+	width: 150px;
+	height: 150px;
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<div id="d1">
+		<div id="d2"></div>
+	</div>
+	<a href="https://naver.com" id="d3">naver</a>
+
+	<script type="text/javascript">
+		/* d1,d2누르면 alert창 뜸(다른 내용) */
+		/*	false	: 자식 이벤트부터 
+			true	: 부모 이벤트부터*/
+		/*	stopPropagation();
+			이벤트의 전파 중단  */
+		/*  preventDefault();
+			이벤트의 동작을 중단*/
+		var d1 = document.getElementById("d1");
+		var d2 = document.getElementById("d2");
+		var d3 = document.getElementById("d3");
+		d1.addEventListener("click", function(e) {
+			alert(e.type);
+			alert('d1 click');
+		}, false)
+		d2.addEventListener("click", function(e) {
+			alert(e.type);
+			alert('d2 click');
+			e.stopPropagation();
+		}, false)
+		d3.addEventListener("click", function(e) {
+			console.log("go naver");
+			e.preventDefault();
+		})
+	</script>
+</body>
+</html>
