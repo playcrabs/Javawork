@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>중복확인</h1>
+	<form action="">
+		<input type="text" id="yId">
+		<button>중복확인</button>
+		<input id="use" type="button" value="사용하기">
+	</form>
+	
+	<script type="text/javascript">
+		var use = document.querySelector("#use");
+		use.addEventListener("click", function() {
+			var id1 = document.getElementById("yId");		/* 현재문서의 yId */
+			var id2 = opener.doument.getElementById("yId");	/* 다른문서의 yId */
+			id2.value = id1.value;
+			close();
+		})
+	</script>
+</body>
+</html>

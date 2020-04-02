@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="checkbox" id="d1" value="1">
+	<input type="checkbox" class="ch1" value="2">
+	<input type="checkbox" class="ch1" value="3">
+	<input type="checkbox" class="ch1" value="4">
+
+	<script type="text/javascript">
+		/* 현재 체크 상태 alert */
+		/* $(".ch1").click(function() {
+			$(".ch1").each(function() {
+				alert($(this).prop("checked"));
+			});
+		}); */
+		
+		/* 전체 체크버튼  */
+		/* 1번의 값을 꺼내서 234에 넣기 */
+		$("#d1").click(function() {
+			var d = $("#d1").prop("checked");
+			$(".ch1").prop("checked",d);
+			/* $(".ch1").each(function() {
+				//idx는 인덱스 번호
+				$(this).prop("checked", d);
+			}); */
+		})
+		
+		/* 234 전부 체크되면 1이 켜지고, 234중 하나라도 빠지면 1도빠짐 */
+		$(".ch1").click(function() {
+			var r = true;
+			$(".ch1").each(function() {
+				if (!$(this).prop("checked")) {
+					result=false;
+				}
+			});
+			$("#d1").prop("checked", r);
+		});
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<ul id="id1">
+		<li>1</li>
+	</ul>
+	<button id="add">add</button>
+	
+	<script type="text/javascript">
+	/*  ul태그 안에 li다음숫자 추가*/
+		var num =1;
+		$("#add").click(function() {
+			num++;
+			$("#id1").append("<li>"+num+"</li>");
+			$("#id1").before("<h1>before"+num+"</h1>");
+			$("#id1").after("<h1>after"+num+"</h1>");
+		})
+	</script>
+</body>
+</html>

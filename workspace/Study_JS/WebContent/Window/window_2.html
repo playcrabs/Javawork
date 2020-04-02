@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="t"></h1>
+	<button id="btn">STOP</button>
+
+	<script type="text/javascript">
+		var t = document.querySelector("#btn");
+		var t = document.querySelector("#t");
+		
+		var st = setInterval(function() {
+			var c = new Date();
+			t.innerHTML = c;
+		}, 1000);
+		
+		btn.addEventListener("click", function() {
+			clearInterval(st);
+		})
+	</script>
+</body>
+</html>

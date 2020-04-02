@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css">
+	#d1{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		margin: 0px auto;
+	}
+</style>
+</head>
+<body>
+	<div id="d1"></div>
+	
+	<script type="text/javascript">
+	/* var s 로 지정해서 "#d1" 대신 s를 넣어도 됨, 혹은 +"." 포함 */
+		$("#d1").mouseenter(function() {
+			console.log("enter!");
+		})
+		$("#d1").mouseleave(function() {
+			console.log("leave?");
+		})
+	</script>
+</body>
+</html>

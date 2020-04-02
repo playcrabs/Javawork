@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input id="d1" type="text">
+	<button id="btn">click1</button>
+	<button id="btn2">click2</button>
+	<input id="d2" type="text">
+
+	<script type="text/javascript">
+		$("#btn").click(function() {
+			$("#d2").val($("#d1").val());
+		});
+		
+		$("#btn2").click(function() {
+			$("#d2").attr("type","button");
+		});
+	</script>
+</body>
+</html>

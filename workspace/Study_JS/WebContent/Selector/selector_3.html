@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button class="c1">button1</button>
+	<button class="c1">button2</button>
+
+	<script type="text/javascript">
+	/*  전체를 잡는 qeurySelectorAll	 */
+		var c1 = document.querySelectorAll(".c1");
+		
+		for (var i = 0; i < c1.length; i++) {
+			c1[i].addEventListener("click", function() {
+				alert("click!");
+			})	
+		}
+	</script>
+</body>
+</html>

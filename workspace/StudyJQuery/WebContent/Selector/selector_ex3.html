@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css"></style>
+</head>
+<body>
+	<input id="num" type="text">
+	<button id="del">delete</button>
+	
+	<div id="d1">
+		<h1>select01</h1>
+	</div>
+	<div id="d2">
+		<h1>select02</h1>
+	</div>
+	<div id="d3">
+		<h1>select03</h1>
+	</div>
+	<div id="d4">
+		<h1>select04</h1>
+	</div>
+	
+	<!-- 지우고 싶은 번호를 입력하고, 버튼을 누르면 해당 h1을 삭제 (if, for, while없이) -->
+	<script type="text/javascript">
+		$("#del").click(function() {
+			var num = $("#num").val();
+			$("#d"+num).remove();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Write Form</h1>
+	<form action="">
+		<p>Writer:<input type="text"></p>
+		<p>Title:<input type="text"></p>
+		<p>Contents</p>
+		<p><textarea rows="20" cols="30"></textarea></p>
+		
+		<p>첨부파일 <input type="button" id="add" value="+"> </p>
+		<div id="file">
+			<!-- <input type="file"> -->
+		</div>
+		
+		<p><button>submit</button></p>
+	</form>
+	
+	<script type="text/javascript">
+		/* 버튼으로 첨부파일 추가, 6개부터는 alert창을 띄워서 경고 */
+		/* + 버튼을 누른횟수로 갯수를 제한할 수도 있음 */
+		$("#add").click(function() {
+			var r = $('div > input').length;
+			var count=0;
+			console.log(count);
+			if (r <5) {
+				$("#file").append("<input type="+"file"+">");
+				count++;
+			} else{
+				alert("첨부파일은 5개까지 입니다.");
+			}
+		});
+	</script>
+</body>
+</html>
