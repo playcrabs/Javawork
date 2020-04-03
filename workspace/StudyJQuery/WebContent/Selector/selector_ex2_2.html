@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	/*	window.onload = function(){}
+		윈도우 로딩이 끝나면 실행	*/
+	/* 문서의 로딩이 끝나면 스크립트를 실행
+		$(document).ready(function() {
+		});		*/
+	/* ↑똑같음 */
+	$(function() {
+		$("#del").click(function() {
+			//console.log($(this).attr("title"));
+			$(".radios").each(function() {
+				var r = $(".radios").prop("checked", true);
+				console.log(r);
+			})
+		})
+	});
+</script>
+</head>
+<body>
+	<input type="radio" class="radios" name="n1" title="first">
+	<input type="radio" class="radios" name="n1" title="second">
+	<input type="radio" class="radios" name="n1" title="third">
+	<input type="radio" class="radios" name="n1" title="forth">
+	<button id="del">delete</button>
+
+	<div id="first">
+		<h1>first</h1>
+	</div>
+	<div id="second">
+		<h1>second</h1>
+	</div>
+	<div id="third">
+		<h1>third</h1>
+	</div>
+	<div id="forth">
+		<h1>forth</h1>
+	</div>
+
+	<!-- 지우고 싶은 번호의 버튼을 누르면 해당 h1을 삭제 (if, for, while없이) -->
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
